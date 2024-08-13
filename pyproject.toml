@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "oyin-backend"
+version = "0.1.0"
+description = "Oyin's E-commerce store backend"
+authors = ["Ayobami Alaran A. <ayobamidele006@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-cors-headers = "^4.4.0"
+django-unfold = "^0.35.0"
+django = "^5.1"
+djangorestframework = "^3.15.2"
+pillow = "^10.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
