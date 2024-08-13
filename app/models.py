@@ -2,6 +2,7 @@ from django.db import models
 from sparky_utils.decorators import str_meta
 from django.utils import timezone
 import uuid
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -25,10 +26,12 @@ class ProductCategory(models.Model):
 
 @str_meta
 class Product(models.Model):
-    id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
+    id = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True, primary_key=True
+    )
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    description = models.TextField()
+    description = RichTextField()
     views = models.IntegerField(default=0)
     category = models.ForeignKey(
         ProductCategory, on_delete=models.SET_NULL, null=True, blank=True
