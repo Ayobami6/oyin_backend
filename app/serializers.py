@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from app.models import AdvertBanner, BannerText, Product, ProductAssets
+from app.models import AdvertBanner, BannerText, Product, ProductAssets, ProductCategory
 
 
 class BannerTextSerializer(serializers.ModelSerializer):
@@ -41,3 +41,9 @@ class ProductSerializer(serializers.ModelSerializer):
         base_url = request.build_absolute_uri("/")[:-1]
         url = f"{base_url}/products/{obj.id}"
         return url
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductCategory
+        fields = "__all__"

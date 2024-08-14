@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    "unfold",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     # third party libraries
     "rest_framework",
     "corsheaders",
-    'ckeditor',
+    "ckeditor",
     # Installed app
     "app",
 ]

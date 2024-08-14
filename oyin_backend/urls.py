@@ -24,7 +24,7 @@ from app.views import RootPage
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RootPage.as_view(), name="root_page"),
-    path("api/v1", include("app.urls")),
+    path("api/v1/", include("app.urls")),
     # Add more URLs here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
