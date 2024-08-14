@@ -17,6 +17,8 @@ class BannerText(models.Model):
 class AdvertBanner(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to="ads/")
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
 
 
 @str_meta
@@ -43,6 +45,8 @@ class Product(models.Model):
 @str_meta
 class ProductAssets(models.Model):
     name = models.CharField(max_length=100)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="assets"
+    )
     image = models.ImageField(upload_to="product_assests/", null=True, blank=True)
     alt = models.CharField(max_length=100, null=True, blank=True)

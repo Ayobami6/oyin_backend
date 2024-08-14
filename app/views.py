@@ -14,7 +14,7 @@ class RootPage(APIView):
 
     def get(self, request, format=None):
         return service_response(
-            status=200,
+            status="success",
             message="Welcome to Oyin's Eccommerce API",
             data={},
         )
@@ -34,9 +34,10 @@ class BannerTextAPIView(APIView):
             serializer = self.serializer_class(banner)
             # return the serialized BannerText
             return service_response(
-                status=200,
+                status="success",
                 message="Banner Text retrieved successfully",
                 data=serializer.data,
+                status_code=200,
             )
         except Exception:
             return handle_internal_server_exception()
