@@ -121,7 +121,9 @@ class ProductAPIViewset(viewsets.ModelViewSet):
                         "assets", queryset=ProductAssets.objects.only(*assets_fields)
                     )
                 ).filter(category=int(category))
-            serializer = self.serializer_class(products, context={"request": request}, many=True)
+            serializer = self.serializer_class(
+                products, context={"request": request}, many=True
+            )
             data = serializer.data
             return service_response(
                 status="success",
@@ -141,7 +143,9 @@ class ProductAPIViewset(viewsets.ModelViewSet):
             product = self.get_object()
             # get product assets
             assets = ProductAssets.objects.only(*assets_fields).filter(product=product)
-            serializer = ProductSerializer(product, context={"assets": assets})
+            serializer = ProductSerializer(
+                product, context={"assets": assets, "request": request}
+            )
             return service_response(
                 status="success",
                 message="Product retrieved successfully",
