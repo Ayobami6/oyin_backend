@@ -1,1 +1,7 @@
 2024-08-16 08:32:08,298 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2024-08-16 10:28:51,184 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2024-08-16 14:30:45,868 [WARNING] django.request - Not Found: /favicon.ico
+2024-08-16 16:02:05,882 [INFO] django.utils.autoreload - C:\Users\Ayo\Projects\oyin_backend\app\models.py changed, reloading.
+2024-08-16 16:02:08,152 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2024-08-16 16:02:11,341 [INFO] django.utils.autoreload - C:\Users\Ayo\Projects\oyin_backend\app\models.py changed, reloading.
+2024-08-16 16:02:12,879 [INFO] django.utils.autoreload - Watching for file changes with StatReloader

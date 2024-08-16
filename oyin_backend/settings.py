@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     # third party libraries
     "rest_framework",
     "corsheaders",
-    "ckeditor",
     # Installed app
     "app",
 ]
