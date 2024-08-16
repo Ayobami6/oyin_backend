@@ -1,4 +1,5 @@
 from urllib import response
+from django.http import Http404
 from django.shortcuts import render
 from rest_framework.views import APIView
 from sparky_utils.response import service_response
@@ -151,6 +152,13 @@ class ProductAPIViewset(viewsets.ModelViewSet):
                 message="Product retrieved successfully",
                 data=serializer.data,
                 status_code=200,
+            )
+        except Http404:
+            return service_response(
+                status="error",
+                message="Product not found",
+                data={},
+                status_code=404,
             )
         except Exception:
             return handle_internal_server_exception()
