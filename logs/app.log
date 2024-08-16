@@ -5,3 +5,4 @@
 2024-08-16 16:02:08,152 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
 2024-08-16 16:02:11,341 [INFO] django.utils.autoreload - C:\Users\Ayo\Projects\oyin_backend\app\models.py changed, reloading.
 2024-08-16 16:02:12,879 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+2024-08-16 16:05:30,057 [INFO] django.utils.autoreload - Watching for file changes with StatReloader
